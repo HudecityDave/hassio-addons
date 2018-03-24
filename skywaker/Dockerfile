@@ -7,7 +7,7 @@ RUN apk add --no-cache jq nodejs nodejs-npm git \
 	&& mkdir repo \
 	&& cd repo \
 	&& git init . \
-	&& git remote add -f origin https://github.com/HudecityDave/hassio-addons\
+	&& git remote add -f origin https://github.com/HudecityDave/hassio-addons \
 	&& git config core.sparseCheckout true \
 	&& echo "hass/sky-hass-waker/" >> .git/info/sparse-checkout \
 	&& git pull origin master \

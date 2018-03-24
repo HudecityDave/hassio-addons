@@ -4,16 +4,13 @@ const express = require("express");
 const app = express();
 
 const router = express.Router();
+var SkyRemote = require('sky-remote');
+var remoteControl = new SkyRemote(':device_ip', SkyRemote.SKY_Q_LEGACY);
 
-var remoteControl = new SkyRemote('192.168.1.180', SkyRemote.SKY_Q_LEGACY);
-
-const OK = {status: "success"};
-const HTTP_400 = 400;
-const HTTP_404 = 404;
 
 const argv = require('minimist')(process.argv.slice(2));
 
-
+const skyip = argv.skyip || "0.0.0.0";
 const get_options = function (ip) {
     return {
         address: ip,
@@ -21,27 +18,21 @@ const get_options = function (ip) {
     }
 };
 
-router.route("/192.168.1.180/on")
+router.route("/" + skyip + "/on")
     .get(function (req, res) {
         remoteControl.press('power');
-        }).catch(
-            function (err) {
-                res.status(HTTP_400);
-                res.json({status: err.message})
+console.log("toggled power on" + skyip);
             }
         );
-    });
 
-router.route("/192.168.1.180/off")
+	
+router.route("/" + skyip + "/off")
     .get(function (req, res) {
         remoteControl.press('power');
-        }).catch(
-            function (err) {
-                res.status(HTTP_400);
-                res.json({status: err.message})
+console.log("toggled power on" + skyip);
             }
-        );
-    });
+        );		
+
 
 app.use("/sky", router);
 const port = argv.port || 3000;

@@ -10,22 +10,11 @@
     "host_network": true,
     "options": {
         "port": 3032,
-        "devices": [
-            {
-                "client_type": "i",
-                "auth_type": "C",
-                "credentials": "nothing"
-            }
-        ]
+		"skyip": "192.168.1.180"
+        
     },
     "schema": {
        "port": "int",
-        "devices": [
-            {
-                "client_type": "str",
-                "auth_type": "str",
-                "credentials": "str"
-            }
-        ]
+	   "skyip": "str"     
     }
 }
