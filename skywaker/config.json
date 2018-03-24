@@ -1,0 +1,31 @@
+{
+    "name": "SkyWakerBridge",
+    "version": "0.0.1",
+    "slug": "skywaker",
+    "description": "REST wrapper around sky-remote-cli",
+    "url": "tbd",
+    "image": "tbd",
+    "startup": "after",
+    "boot": "auto",
+    "host_network": true,
+    "options": {
+        "port": 3032,
+        "devices": [
+            {
+                "client_type": "i",
+                "auth_type": "C",
+                "credentials": "nothing"
+            }
+        ]
+    },
+    "schema": {
+       "port": "int",
+        "devices": [
+            {
+                "client_type": "str",
+                "auth_type": "str",
+                "credentials": "str"
+            }
+        ]
+    }
+}
