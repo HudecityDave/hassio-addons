@@ -10,7 +10,7 @@
     "host_network": true,
     "options": {
         "port": 3032,
-		"skyip": "192.168.1.180"
+		"skyip": "IP_HERE"
         
     },
     "schema": {
