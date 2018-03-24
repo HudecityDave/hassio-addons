@@ -13,11 +13,11 @@ The sky.py has to be in custom_components/media_player (is a direct copy of the 
 
 set up a media_play like this:
 ```
-  - platform: sky
-    host: http://hassio_ip:port
-    sky_ip: ip_of_sky_box
-    name: Sky Receiver
-    local_store: channels
+platform: sky
+host: http://hassio_ip:port
+sky_ip: ip_of_sky_box
+name: Sky Receiver
+local_store: channels
 ```
 
 ## Hassio UI

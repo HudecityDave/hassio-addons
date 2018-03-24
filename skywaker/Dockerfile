@@ -15,6 +15,7 @@ RUN apk add --no-cache jq nodejs nodejs-npm git \
 	&& npm config set unsafe-perm true \
 	&& npm install -g mustache \
 	&& npm install -g sky-remote-cli \
+	&& npm install -g sky-remote \
 	&& npm install -g . \
 	&& npm config set unsafe-perm false \
 	&& cd ../../../ \
