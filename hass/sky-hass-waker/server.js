@@ -21,7 +21,7 @@ const get_options = function (ip) {
 router.route("/" + skyip + "/on")
     .get(function (req, res) {
         remoteControl.press('power');
-console.log("toggled power on" + skyip);
+console.log("toggled power on " + skyip);
             }
         );
 
@@ -29,7 +29,7 @@ console.log("toggled power on" + skyip);
 router.route("/" + skyip + "/off")
     .get(function (req, res) {
         remoteControl.press('power');
-console.log("toggled power on" + skyip);
+console.log("toggled power on " + skyip);
             }
         );		
 
