@@ -1,3 +1,3 @@
-## Sky component helper
+## sky-hass-waker - Sky.py bridge helper 
 
-tbd.
+This is the server bridge, communication between hass.io and docker is done here.

@@ -1,7 +1,7 @@
 {
   "name": "sky-hassio-waker",
   "version": "0.0.1",
-  "description": "Bridge between sky-remote-cli and Hass.io",
+  "description": "Bridge between sky-remote and Hass.io",
   "main": "server.js",
   "author": "David Wagner",
   "bin": {
@@ -10,6 +10,7 @@
   "dependencies": {
     "express": "^4.15.3",
     "sky-remote-cli": "^1.2.0",
+	"sky-remote": "^1.2.0",
    "minimist": "^1.2.0"
   }
 }
