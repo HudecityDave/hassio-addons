@@ -2,8 +2,8 @@
 
 The original [Sky-Remote](https://github.com/dalhundal/sky-remote) from dalhundal requires nodejs package to work. This small addon will run a REST-wrapper around it to use sky-remote with hass.io.
 
-I used vkorns [ps4-hass-waker] (https://github.com/vkorn/hassio-addons/tree/master/ps4waker) as base, and changed everything for use with sky-remote. 
-I only use the "power" function in automations, and because of the sky box is not responding any state everything is very basic here.
+I used vkorns [ps4-hass-waker](https://github.com/vkorn/hassio-addons/tree/master/ps4waker) as base, and changed everything for use with sky-remote. 
+I only use the "power" function in automations. The sky box is not responding any state, so everything is very basic here.
 
 ## sky.py
 You have to configure a custom component media player to use is.
