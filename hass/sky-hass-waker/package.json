@@ -1,6 +1,6 @@
 {
   "name": "sky-hassio-waker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "bridge between sky-remote and hass.io",
   "main": "server.js",
   "author": "david wagner",
