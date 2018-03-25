@@ -6,7 +6,7 @@ const app = express();
 const router = express.Router();
 var SkyRemote = require('sky-remote');
 var remoteControl = new SkyRemote('192.168.1.180', SkyRemote.SKY_Q_LEGACY);
-
+const skyip = argv.skyip || "0.0.0.0";
 
 const argv = require('minimist')(process.argv.slice(2));
 
@@ -36,7 +36,6 @@ console.log("toggled power on " + skyip);
 app.use("/sky", router);
 const port = argv.port || 3000;
 const ip = argv.host || "0.0.0.0";
-const skyip = argv.skyip || "0.0.0.0";
 app.listen(port, ip, function () {
     console.log("Listening on " + ip + ":" + port);
 });
