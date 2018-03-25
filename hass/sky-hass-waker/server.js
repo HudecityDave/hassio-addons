@@ -5,7 +5,7 @@ const app = express();
 
 const router = express.Router();
 var SkyRemote = require('sky-remote');
-var remoteControl = new SkyRemote(skyip, SkyRemote.SKY_Q_LEGACY);
+var remoteControl = new SkyRemote(192.168.1.180, SkyRemote.SKY_Q_LEGACY);
 
 
 const argv = require('minimist')(process.argv.slice(2));
