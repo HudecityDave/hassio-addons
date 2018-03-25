@@ -1,17 +1,14 @@
 {
-    "name": "SkyWakerBridge",
+    "name": "skywakerbridge",
     "version": "0.0.1",
     "slug": "skywaker",
-    "description": "REST wrapper around sky-remote-cli",
-    "url": "tbd",
-    "image": "tbd",
+    "description": "rest wrapper around sky-remote-cli",
     "startup": "after",
     "boot": "auto",
     "host_network": true,
     "options": {
         "port": 3032,
-		"skyip": "IP_HERE"
-        
+		"skyip": "ip_here"       
     },
     "schema": {
        "port": "int",
