@@ -2,7 +2,7 @@
 
 const express = require("express");
 const app = express();
-
+const skyip = argv.skyip || "0.0.0.0";
 const router = express.Router();
 var SkyRemote = require('sky-remote');
 var remoteControl = new SkyRemote(skyip, SkyRemote.SKY_Q_LEGACY);
@@ -10,7 +10,6 @@ var remoteControl = new SkyRemote(skyip, SkyRemote.SKY_Q_LEGACY);
 
 const argv = require('minimist')(process.argv.slice(2));
 
-const skyip = argv.skyip || "0.0.0.0";
 const get_options = function (ip) {
     return {
         address: ip,
