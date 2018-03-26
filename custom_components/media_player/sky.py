@@ -103,7 +103,7 @@ class SKYDevice(MediaPlayerDevice):
 
     @util.Throttle(MIN_TIME_BETWEEN_SCANS, MIN_TIME_BETWEEN_FORCED_SCANS)
     def update(self):
-        """Retrieve the latest data."""
+        """Retrieve the latest data.
         data = self.sky.search()
         self._media_title = data.get('running-app-name')
         self._media_content_id = data.get('running-app-titleid')
@@ -115,12 +115,12 @@ class SKYDevice(MediaPlayerDevice):
                 self._state = STATE_PLAYING
             else:
                 self._state = STATE_IDLE
-        else:
-            self._state = STATE_OFF
-            self._media_title = None
-            self._media_content_id = None
-            self._current_source = None
-            self._current_source_id = None
+        else:"""
+        self._state = STATE_OFF
+        self._media_title = None
+        self._media_content_id = None
+        self._current_source = None
+        self._current_source_id = None
 
     def load_games_map(self):
         try:
