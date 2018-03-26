@@ -1,11 +1,10 @@
-FROM %%BASE_IMAGE%%
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
 RUN apk add --no-cache jq nodejs nodejs-npm git \
 	
-	&& mkdir repo \
-	&& cd repo \
 	&& git init . \
 	&& git remote add -f origin https://github.com/hudecitydave/hassio-addons \
 	&& git config core.sparseCheckout true \
@@ -17,9 +16,7 @@ RUN apk add --no-cache jq nodejs nodejs-npm git \
 	&& npm install -g sky-remote-cli \
 	&& npm install -g sky-remote \
 	&& npm install -g . \
-	&& npm config set unsafe-perm false \
-	&& cd ../../../ \
-	&& rm -rf repo
+	&& npm config set unsafe-perm false
 
 COPY run.sh /
 RUN chmod a+x /run.sh

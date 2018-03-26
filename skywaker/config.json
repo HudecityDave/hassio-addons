@@ -8,10 +8,10 @@
     "host_network": true,
     "options": {
         "port": 3032,
-		"skyip": "ip_here"       
+        "skyip": "ip_here"
     },
     "schema": {
        "port": "int",
-	   "skyip": "str"     
+       "skyip": "str"
     }
 }
